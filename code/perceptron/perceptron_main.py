@@ -32,7 +32,7 @@ class Perceptron(object):
                 correct_count += 1
                 continue
 
-            for i in xrange(len(self.w)):
+            for i in range(len(self.w)):
                 self.w[i] += self.learning_step * (y * x[i])
 
     def predict(self,features):

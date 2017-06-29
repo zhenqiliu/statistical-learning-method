@@ -26,7 +26,7 @@ class Perceptron(object):
             x = list(features[index])
             x.append(1.0)
             y = 2 * labels[index] - 1
-            wx = sum([self.w[j] * x[j] for j in xrange(len(self.w))])
+            wx = sum([self.w[j] * x[j] for j in range(len(self.w))])
 
             if wx * y > 0:
                 correct_count += 1

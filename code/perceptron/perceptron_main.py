@@ -10,7 +10,7 @@ class Perceptron(object):
 
     def __init__(self):
         self.learning_step = 0.00001
-        self.max_iteration = 20000
+        self.max_iteration = 30000
 
     def predict_(self, x):
         wx = sum([self.w[j] * x[j] for j in range(len(self.w))])
@@ -77,4 +77,4 @@ if __name__ == '__main__':
     print('predicting cost ', time_4 - time_3, ' second', '\n')
 
     score = accuracy_score(test_labels, test_predict)
-    print("The accruacy socre is ", score)
+    print("The accruacy score is ", score)

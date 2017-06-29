@@ -16,7 +16,7 @@ class Knn(object):
         count = 0
 
         for test_vec in testset:
-            print count
+            print(count)
             count += 1
 
             knn_list = []       

@@ -13,7 +13,7 @@ class Perceptron(object):
         self.max_iteration = 10000
 
     def predict_(self, x):
-        wx = sum([self.w[j] * x[j] for j in xrange(len(self.w))])
+        wx = sum([self.w[j] * x[j] for j in range(len(self.w))])
         return int(wx > 0)
 
     def train(self, features, labels):

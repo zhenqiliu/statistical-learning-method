@@ -24,7 +24,7 @@ class Knn(object):
             max_dist = 0        # max distance of current knn list
 
             # initiailize with first k points in training set
-            for i in range(k):
+            for i in range(self.k):
                 label = train_labels[i]
                 train_vec = trainset[i]
 
@@ -33,7 +33,7 @@ class Knn(object):
                 knn_list.append((dist,label))
 
             # process the rest data in training set 
-            for i in range(k,len(train_labels)):
+            for i in range(self.k,len(train_labels)):
                 label = train_labels[i]
                 train_vec = trainset[i]
 
@@ -41,7 +41,7 @@ class Knn(object):
 
                 # find the max index in current knn list
                 if max_index < 0:
-                    for j in range(k):
+                    for j in range(self.k):
                         if max_dist < knn_list[j][0]:
                             max_index = j
                             max_dist = knn_list[max_index][0]

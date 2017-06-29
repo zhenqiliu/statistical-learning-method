@@ -46,7 +46,7 @@ class Perceptron(object):
 
 if __name__ == '__main__':
 
-    print 'Start read data'
+    print('Start read data')
 
     time_1 = time.time()
 
@@ -58,23 +58,23 @@ if __name__ == '__main__':
 
     train_features, test_features, train_labels, test_labels = train_test_split(
         imgs, labels, test_size=0.33, random_state=23323)
-    # print train_features.shape
-    # print train_features.shape
+    print(train_features.shape)
+    print(train_features.shape)
 
     time_2 = time.time()
-    print 'read data cost ', time_2 - time_1, ' second', '\n'
+    print('read data cost ', time_2 - time_1, ' second', '\n')
 
-    print 'Start training'
+    print('Start training')
     p = Perceptron()
     p.train(train_features, train_labels)
 
     time_3 = time.time()
-    print 'training cost ', time_3 - time_2, ' second', '\n'
+    print('training cost ', time_3 - time_2, ' second', '\n')
 
-    print 'Start predicting'
+    print('Start predicting')
     test_predict = p.predict(test_features)
     time_4 = time.time()
-    print 'predicting cost ', time_4 - time_3, ' second', '\n'
+    print('predicting cost ', time_4 - time_3, ' second', '\n')
 
     score = accuracy_score(test_labels, test_predict)
-    print "The accruacy socre is ", score
+    print("The accruacy socre is ", score)

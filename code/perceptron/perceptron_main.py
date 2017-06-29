@@ -10,7 +10,7 @@ class Perceptron(object):
 
     def __init__(self):
         self.learning_step = 0.00001
-        self.max_iteration = 10000
+        self.max_iteration = 20000
 
     def predict_(self, x):
         wx = sum([self.w[j] * x[j] for j in range(len(self.w))])

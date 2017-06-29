@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
     time_3 = time.time()
     print('training cost ', time_3 - time_2, ' second', '\n')
-
+    print('the model parameter is',p.w,'\n')
     print('Start predicting')
     test_predict = p.predict(test_features)
     time_4 = time.time()
